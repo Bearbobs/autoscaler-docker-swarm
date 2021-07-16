@@ -61,11 +61,13 @@ scale_down () {
   if [[ "${auto_scale_label}" == "\"true\"" ]]; then
     current_replicas=$(docker service inspect $service_name | jq ".[].Spec.Mode.Replicated | .Replicas")
     new_replicas=$(expr $current_replicas - 1)
-    if [[ $replica_minimum -le $new_replicas ]]; then
+    if [[ $current_replicas -eq $replica_minimum ]]; then
+      echo Service $service_name has the minumum number of replicas.
+    elif [[ $current_replicas -eq 1 ]]; then
+      echo Service $service_name has only 1 replica.
+    elif [[ $replica_minimum -le $new_replicas ]]; then
       echo Scaling down the service $service_name to $new_replicas
       docker service scale $service_name=$new_replicas
-    elif [[ $current_replicas -eq $replica_minimum ]]; then
-      echo Service $service_name has the minumum number of replicas.
     fi
   fi
 
@@ -102,7 +104,7 @@ main () {
     echo Checking for low cpu services
     for service in $(get_low_cpu_services "${prometheus_initial_results}"); do
       echo Service $service is below $CPU_PERCENTAGE_LOWER_LIMIT percent cpu usage.
-      scale_down $service  
+      scale_down $service
     done
 }
 
