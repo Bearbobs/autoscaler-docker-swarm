@@ -6,7 +6,7 @@ Plan is to make a simple stack addon which will deployed on swarm manager and co
 
 ## Features
 
-[ ] Autoscaler stack
-[ ] Add support to check disc, ram and other parameters to make sure server has resources to scale up the service
-[ ] Support notifications to slack, email or other custom api
-[ ] Terraform support to scale up and down infra as well.
+- [ ] Autoscaler stack
+- [ ] Add support to check disc, ram and other parameters to make sure server has resources to scale up the service
+- [ ] Support notifications to slack, email or other custom api
+- [ ] Terraform support to scale up and down infra as well.
