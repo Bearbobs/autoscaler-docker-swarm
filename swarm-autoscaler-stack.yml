@@ -8,8 +8,8 @@ configs:
     file: ./config.yml
 
 services:
-  docker-swarm-autoscaler:
-    build: autoscaler/.
+  autoscaler:
+    image: ghcr.io/bearbobs/autoscaler:latest
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
