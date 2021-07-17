@@ -11,4 +11,4 @@ Plan is to make a simple stack addon which will deployed on swarm manager and co
 - [ ] Support notifications to slack, email or other custom api
 - [ ] Terraform support to scale up and down infra as well.
 
-It is inspired from ![Stack-Answer](https://stackoverflow.com/questions/41668621/how-to-configure-autoscaling-on-docker-swarm) and derived from this ![repo](https://github.com/jcwimer/docker-swarm-autoscaler)
+It is inspired from [Stack-Answer](https://stackoverflow.com/questions/41668621/how-to-configure-autoscaling-on-docker-swarm) and derived from this [repo](https://github.com/jcwimer/docker-swarm-autoscaler)
