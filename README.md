@@ -1,8 +1,7 @@
 # autoscaler-docker-swarm
-Service to scale up and down conatiners in swarm depending on the load
+Service to scale up and down containers in swarm depending on the load.
 
-It is one of the features, lack of which swarm makes k8s as a no brainer for many use cases.
-Plan is to make a simple stack addon which will deployed on swarm manager and control replicas of other services based on cpu usage.
+It is one of the features, lack of which swarm makes k8s a no brainer for many use cases. The plan is to make a simple stack addon that will deploy on swarm manager and control replicas of other services based on CPU usage.
 
 ## Features
 
