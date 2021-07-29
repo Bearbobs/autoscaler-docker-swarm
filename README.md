@@ -6,8 +6,8 @@ It is one of the features, lack of which swarm makes k8s a no brainer for many u
 ## Features
 
 - [x] Autoscaler stack
-- [ ] Add support to check disc, ram and other parameters to make sure server has resources to scale up the service
-- [ ] Support notifications to slack, email or other custom api
+- [ ] Add support to check disk, ram and other parameters to make sure server has resources to scale up the service
+- [ ] Support notifications to slack, email or other callback api
 - [ ] Terraform support to scale up and down infrastructure as well.
 
 It is inspired from [Stack-Answer](https://stackoverflow.com/questions/41668621/how-to-configure-autoscaling-on-docker-swarm) and derived from this [repo](https://github.com/jcwimer/docker-swarm-autoscaler)
